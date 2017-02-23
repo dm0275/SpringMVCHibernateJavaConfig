@@ -1,5 +1,7 @@
 package com.gmail.dm0275.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,8 +14,9 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "Country")
-public class Country {
+public class Country implements Serializable {
 
+    private static final long serialVersionUID = -1092949745977380885L;
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -58,6 +61,11 @@ public class Country {
 
     public void setPopulation(long population) {
         this.population = population;
+    }
+
+    @Override
+    public String toString() {
+        return "Id :" + this.id + ", Country: " + this.countryName + ", Population: " + this.population;
     }
 }
 
