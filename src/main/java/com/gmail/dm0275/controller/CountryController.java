@@ -26,7 +26,6 @@ public class CountryController {
     public String addCountry(@ModelAttribute("country") Country country) {
         if (country.getId() == 0) {
             countryService.addCountry(country);
-            System.out.println("This is a test");
         } else {
             countryService.updateCountry(country);
         }

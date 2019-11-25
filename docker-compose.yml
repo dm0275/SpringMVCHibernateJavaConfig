@@ -11,7 +11,6 @@ services:
     networks:
       - shared-network
     volumes:
-      #      - ./target/Spring-1.0.0.war:/usr/local/tomcat/webapps/ROOT
       - ./target/Spring-1.0.0:/usr/local/tomcat/webapps/ROOT
   db:
     container_name: db

@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-This is the index page <a href="get">Let's get it</a>
+This is the index page <a href="getAllCountries">Country population data.</a>
 
 </body>
 </html>
