@@ -28,7 +28,7 @@ public class JsonTest {
         String countryJson = gson.toJson(country);
 
         try {
-            FileWriter fileWriter = new FileWriter("D:\\Users\\dmancilla\\Documents\\Country.json");
+            FileWriter fileWriter = new FileWriter("Country.json");
             fileWriter.write(countryJson);
             fileWriter.flush();
         } catch (IOException e) {
@@ -42,7 +42,7 @@ public class JsonTest {
     @Test
     public void readFromJson() {
         try {
-            JsonReader jsonReader = new JsonReader(new FileReader("D:\\Users\\dmancilla\\Documents\\Country.json"));
+            JsonReader jsonReader = new JsonReader(new FileReader("Country.json"));
             Gson gson = new Gson();
             Country country = gson.fromJson(jsonReader, Country.class);
             assertEquals("USA",country.getCountryName());
