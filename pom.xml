@@ -6,7 +6,7 @@
 
     <groupId>com.gmail.dm0275</groupId>
     <artifactId>Spring</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>SpringApp</name>
     <packaging>war</packaging>
 
@@ -47,10 +47,9 @@
             <version>1.4</version>
         </dependency>
         <dependency>
-            <groupId>net.sourceforge.jtds</groupId>
-            <artifactId>jtds</artifactId>
-            <version>1.2.7</version>
-            <type>jar</type>
+            <groupId>postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.1-901.jdbc4</version>
         </dependency>
         <dependency>
             <groupId>net.sourceforge.jtds</groupId>

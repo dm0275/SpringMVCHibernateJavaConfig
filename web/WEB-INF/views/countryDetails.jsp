@@ -9,7 +9,7 @@
     <title>Countries</title>
 </head>
 <body>
-<form:form method="post" modelAttribute="country" action="/Spring/addCountry">
+<form:form method="post" modelAttribute="country" action="/addCountry">
     <table>
         <tr>
             <th colspan="2">Add Country</th>
@@ -44,8 +44,8 @@
                 <td>${country.id}</td>
                 <td>${country.countryName}</td>
                 <td><fmt:formatNumber type="number" maxFractionDigits="3" value="${country.population}" /></td>
-                <td><a href="<c:url value='/Spring/updateCountry/${country.id}' />" >Edit</a></td>
-                <td><a href="<c:url value='/Spring/deleteCountry/${country.id}' />" >Delete</a></td>
+                <td><a href="<c:url value='/updateCountry/${country.id}' />" >Edit</a></td>
+                <td><a href="<c:url value='/deleteCountry/${country.id}' />" >Delete</a></td>
             </tr>
         </c:forEach>
     </table>

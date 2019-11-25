@@ -44,18 +44,18 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     @Bean(name = "dataSource")
     public DataSource getDataSource() {
         BasicDataSource dataSource = new BasicDataSource();
-        dataSource.setDriverClassName("net.sourceforge.jtds.jdbc.Driver");
-        dataSource.setUrl("jdbc:jtds:sqlserver://localhost:1433/Countries");
-        dataSource.setUsername("sa");
-        dataSource.setPassword("famc:1234");
+        dataSource.setDriverClassName("org.postgresql.Driver");
+        dataSource.setUrl("jdbc:postgresql://localhost:5432/countries");
+        dataSource.setUsername("admin");
+        dataSource.setPassword("password");
         return dataSource;
     }
 
     private Properties getHibernateProperties() {
         Properties properties = new Properties();
         properties.put("hibernate.show_sql", "true");
-        properties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
-        properties.put("hibernate.default_schema", "dbo");
+        properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
+        properties.put("hibernate.default_schema", "public");
         return properties;
     }
 
